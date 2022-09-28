@@ -28,5 +28,13 @@ At some point I would like to have a curl install like brew that just handles ev
 - google chrome 
 - dbngin 
 
+## Gotcha
 
+### DBngin 
+
+```sh 
+# dbngin access bug fix
+export PATH=/Users/Shared/DBngin/mysql/8.0.12/bin:$PATH
+sudo chmod -R 777 /Users/Shared/DBngin/ 
+```
 
