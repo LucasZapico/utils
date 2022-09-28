@@ -180,7 +180,16 @@ if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
 else 
   echo "deta not init"
 fi
+}
 
+install_unverified_apps(){
+  echo -e "${Yellow}⚠️ Warning: Don't do 👇 if you don't know what it is?${NC}"
+  echo -e "${Cyan}Would you like to enable install of apps from 'unverified developers'?${NC} (y/n):"
+  read CONFRIM
+  if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
+  # open apps from unverified developers
+  sudo spctl --master-disable
+  fi
 }
 
 export installBrewPackages
@@ -189,7 +198,7 @@ export github_config
 export set_alias
 export ruby_setup
 export install_deta
-
+export install_unverified_apps
 
 
 
