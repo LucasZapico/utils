@@ -49,22 +49,6 @@ echo -e "${Cyan}Would you like to configure Github?${NC} (y/n):"
 read CONFRIM
 
 ##
-## TODO: add a check user name is correct 
-##
-if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
-  echo "Enter github username" 
-  read GITUSERNAME
-  echo "Enter github email" 
-  read GITEMAIL
-  echo "${GITUSERNAME}, ${GITEMAIL}"
-  git config --global user.email ${GITEMAIL}
-  git config --global user.name ${GITUSERNAME}
-
-else 
-  echo "github not confirmed"
-fi
-
-##
 ## install zshrc
 ##
 echo -e "${Cyan}Would you like to install ohmyzsh?${NC} (y/n):"
@@ -163,6 +147,21 @@ installBrewCasks() {
   return 1
 }
 
+##
+## TODO: add a check user name is correct 
+##
+if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
+  echo "Enter github username" 
+  read GITUSERNAME
+  echo "Enter github email" 
+  read GITEMAIL
+  echo "${GITUSERNAME}, ${GITEMAIL}"
+  git config --global user.email ${GITEMAIL}
+  git config --global user.name ${GITUSERNAME}
+
+else 
+  echo "github not confirmed"
+fi
 
 
 
