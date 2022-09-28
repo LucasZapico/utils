@@ -2,7 +2,10 @@
 
 source $(dirname "$0")/macos_quickstart.sh 
 
-
+##
+## test command
+##
+echo "macOS up and running script"
 
 installBrewPackages
 installBrewCasks
