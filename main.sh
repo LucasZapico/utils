@@ -13,3 +13,4 @@ github_config
 set_alias
 ruby_setup
 install_deta
+install_unverified_apps
