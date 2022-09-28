@@ -1,19 +1,5 @@
 #!/bin/bash
 
-# todo:
-# - add vscode extensions ??
-# - add prompt to install all or prompt to install casks and packages 
-# - trouble shoot success failure message on loops
-# - refernce https://github.com/lk-geimfari/macbook/blob/master/install.sh 
-
-# open apps from unverified developers
-# sudo spctl --master-disable
-
-##
-## test command
-##
-echo "macOS up and running script"
-
 ##
 ## Array of app to be installed
 ## 
@@ -42,11 +28,7 @@ NC='\033[0m'             # No Color
 
 YREGEX="[yY]" 
 YESREGEX="[yY][eE][sS]"
-##
-## Git username and email for git setup
-## 
-echo -e "${Cyan}Would you like to configure Github?${NC} (y/n):"
-read CONFRIM
+
 
 ##
 ## install zshrc
@@ -110,11 +92,13 @@ installBrewPackages() {
   done
   return 1
 }
-installBrewPackages
+
 
 # for i in "${arrayName[@]}"; do
 #   echo $i
 # done
+
+set_alias(){
 
 echo -e "${Cyan}Would you like to Alias python3 to python ${NC}? (y/n):"
 read CONFRIM
@@ -125,7 +109,7 @@ if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
   alias pip=pip3
 
 fi
-
+}
 
 # 
 # install brew casks 
@@ -147,6 +131,13 @@ installBrewCasks() {
   return 1
 }
 
+github_config(){
+
+##
+## Git username and email for git setup
+## 
+echo -e "${Cyan}Would you like to configure Github?${NC} (y/n):"
+read CONFRIM
 ##
 ## TODO: add a check user name is correct 
 ##
@@ -162,11 +153,9 @@ if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
 else 
   echo "github not confirmed"
 fi
+}
 
-
-
-installBrewCasks
-
+ruby_setup(){
 # init ruby env 
 echo -e "${Cyan}Would you like to init rbenv?${NC} (y/n):"
 read CONFRIM
@@ -179,8 +168,10 @@ if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
 else 
   echo "rbenv not init"
 fi
+}
 
-# 
+install_deta(){
+  # 
 echo -e "${Cyan}Would you like to install deta?${NC} (y/n):"
 read CONFRIM
 if [[ $CONFRIM =~ $YREGEX || $CONFRIM =~ $YESREGEX ]]; then
@@ -190,14 +181,16 @@ else
   echo "deta not init"
 fi
 
+}
+
+export installBrewPackages
+export installBrewCasks
+export github_config
+export set_alias
+export ruby_setup
+export install_deta
 
 
 
-# # TEST="curl http://127.0.0.1 -H $CT"
-# # echo $TEST
 
 
-
-# # dbngin access bug fix
-# # export PATH=/Users/Shared/DBngin/mysql/8.0.12/bin:$PATH
-# # sudo chmod -R 777 /Users/Shared/DBngin/ 
