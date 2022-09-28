@@ -28,6 +28,17 @@ At some point I would like to have a curl install like brew that just handles ev
 - google chrome 
 - dbngin 
 
+## Feature Catch 
+
+Catch for ideas for enhancement that are not slated features yet. 
+
+### Ideas
+- [ ] ?? vscode extensions ??
+
+#### Features
+- [x] add prompt to install all or prompt to install casks and packages 
+- [ ] enhance error handling 
+
 ## Gotcha
 
 ### DBngin 
@@ -37,4 +48,12 @@ At some point I would like to have a curl install like brew that just handles ev
 export PATH=/Users/Shared/DBngin/mysql/8.0.12/bin:$PATH
 sudo chmod -R 777 /Users/Shared/DBngin/ 
 ```
+### App from unverified developers
 
+```sh 
+sudo spctl --master-disable
+```
+
+## Reference 
+
+[I. U. mac env set up shell](https://github.com/lk-geimfari/macbook/blob/master/install.sh)
