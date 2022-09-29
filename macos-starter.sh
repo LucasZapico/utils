@@ -8,7 +8,7 @@ BrewCasks=('dbngin' 'loom' 'dropbox' 'clipy' 'devdocs' 'insomnia' 'brave-browser
 ##
 ## Array of packages to be install
 ## 
-BrewPackages=(vim zsh node 'python@3.9' pandoc rbenv, typescript  'mas' 'ffmpeg')
+BrewPackages=(vim zsh node 'python@3.9' pandoc rbenv, typescript  'mas' 'ffmpeg' 'netlify-cli')
 
 ##
 ## Array of Mac App store app to be installed
