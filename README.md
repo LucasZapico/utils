@@ -1,8 +1,10 @@
-# macos-env-starter-script
+# Utils 
+
+Repo previously known as "macos-env-starter-script" 
 
 ## About 
 
-A starter script that "all in one" installs and configure common programs such as Brew, Vscode, python, Node, etc. The goal of this script is to automate the enviroment setup when spinning up work enviroment on fresh macos install. 
+A starter script that "all in one" installs and configures common programs such as Brew, Vscode, python, Node, etc. The goal of this script is to automate the environment setup when spinning up work environment on fresh macos install. 
 
 
 ## Stack
@@ -12,9 +14,8 @@ A starter script that "all in one" installs and configure common programs such a
 
 **Why I started this project**
 
-Over the years I have had to set up my development(work) enviroment on many computers and by the thrid time I knew I needed to automate as much of the process as I could. Thus `macos-env-starter-script` was born. As of 2022 the script is on iteration v1.5 and has finally made it's way from personal gist to repo. 
-
-At some point I would like to have a curl install like brew that just handles everything. But we'll see. 
+Over the years I have had to set up my development(work) environment on many computers and by the third time I knew I needed to automate as much of the process as I could. Thus `macos-env-starter-script` was born. As of 2022 the script is on iteration v1.5 and has finally made its way from personal gist to repo. 
+At some point, I would like to have a curl install-like brew that just handles everything. But we'll see. 
 
 ### Some of what it does 
 
